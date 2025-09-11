@@ -19,17 +19,17 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Takuya's homepage" />
         <meta name="author" content="Nguyen Thi Nhu Nguyet" />
         <meta name="author" content="craftzdog" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="web-title-logo" href="web-title-logo.jpg" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="twitter:title" content="Nguyen Thi Nhu Nguyet" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@craftzdog" />
         <meta name="twitter:creator" content="@craftzdog" />
-        <meta name="twitter:image" content="https://www.craftz.dog/card.png" />
+        <meta name="twitter:image" content="card.jpg" />
         <meta property="og:site_name" content="Nguyen Thi Nhu Nguyet" />
         <meta name="og:title" content="Nguyen Thi Nhu Nguyet" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.craftz.dog/card.png" />
+        <meta property="og:image" content="card.jpg" />
         <title>Nguyen Thi Nhu Nguyet - Homepage</title>
       </Head>
       

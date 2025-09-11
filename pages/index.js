@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5'
+import { IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from 'react-icons/io5'
 import { BioSection, BioYear } from '../components/bio'
 import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
@@ -88,14 +88,7 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Nhu Nguyet is a passionate software engineer with 2 years of experience
-          in web development. She specializes in building modern, responsive web
-          applications using cutting-edge technologies. With a strong foundation
-          in both frontend and backend development, she enjoys creating seamless
-          user experiences and solving complex technical challenges. Her expertise
-          includes React, Node.js, and various web frameworks. When not coding,
-          she loves exploring new technologies and contributing to open-source
-          projects.
+          Hi, I’m Nhu Nguyet, a student who loves web development. I’ve worked on several personal and team projects using React and Node.js. I enjoy building smooth, user-friendly web apps and I’m always curious about new technologies. I also like contributing to open-source projects to learn more from the community.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
@@ -126,20 +119,16 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>2020</BioYear>
+          <BioYear>2023</BioYear>
           Started learning web development and programming fundamentals.
         </BioSection>
         <BioSection>
-          <BioYear>2021</BioYear>
+          <BioYear>2024</BioYear>
           Completed Computer Science degree and began first web development projects.
         </BioSection>
         <BioSection>
-          <BioYear>2022</BioYear>
+          <BioYear>2025 - Present</BioYear>
           Started professional career as a software engineer, focusing on full-stack web development.
-        </BioSection>
-        <BioSection>
-          <BioYear>2022 to present</BioYear>
-          Working as a software engineer with expertise in modern web technologies.
         </BioSection>
       </Section>
 
@@ -180,7 +169,7 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/nhunguyet" target="_blank">
+            <Link href="https://github.com/NguyettNhu" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="purple"
@@ -191,35 +180,35 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://linkedin.com/in/nhunguyet" target="_blank">
+            <Link href="https://www.linkedin.com/in/nh%C6%B0-nguy%E1%BB%87t/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="purple"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                LinkedIn Profile
+                @nhunguyet
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/nhunguyet_dev" target="_blank">
+            <Link href="https://www.facebook.com/nhunguyttttne" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="purple"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoFacebook />}
               >
-                @nhunguyet_dev
+                @nhunguyet
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://instagram.com/nhunguyet.dev" target="_blank">
+            <Link href="https://www.instagram.com/_nguytdeyy_/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="purple"
                 leftIcon={<IoLogoInstagram />}
               >
-                @nhunguyet.dev
+                @nhunguyet
               </Button>
             </Link>
           </ListItem>
@@ -227,7 +216,7 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6} mt={4}> 
           <GridItem
-            href="https://github.com/nhunguyet"
+            href="https://github.com/NguyettNhu"
             title="GitHub Portfolio"
             thumbnail={thumbYouTube}
           >
@@ -260,7 +249,7 @@ const Home = () => (
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="mailto:nhunguyet@example.com"
+            href="mailto:https://mail.google.com/mail/u/0/#inbox"
             scroll={false}
             leftIcon={<EmailIcon />}
             bgGradient="linear(to-r, purple.500, cyan.400)"
