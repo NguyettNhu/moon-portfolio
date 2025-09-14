@@ -110,7 +110,8 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList bg='whiteAlpha.300'>
+              <MenuList bg="rgba(0, 0, 0, 0.8)"
+      backdropFilter="blur(10px)">
                
                 <MenuItem bg='transparent' as={MenuLink} href="/works">
                   Works
