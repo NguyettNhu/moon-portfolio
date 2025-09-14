@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
+import { Box } from '@chakra-ui/react'
 import { GridItemStyle } from '../grid-item'
 
 const variants = {
@@ -11,20 +12,21 @@ const variants = {
 const Layout = ({ children, title }) => {
   const t = `${title} - Nguyen Thi Nhu Nguyet`
   return (
-    <motion.article
+    <Box
+      as={motion.article}
       initial="hidden"
       animate="enter"
       exit="exit"
       variants={variants}
       transition={{ duration: 0.4, type: 'easeInOut' }}
-      style={{ 
-        position: 'relative',
-        backgroundColor: 'rgba(0, 0, 0, 0.3)',
-        backdropFilter: 'blur(10px)',
-        borderRadius: '12px',
-        padding: '2rem',
-        margin: '1rem'
-      }}
+      position="relative"
+      backgroundColor="rgba(0, 0, 0, 0.3)"
+      backdropFilter="blur(10px)"
+      borderRadius="12px"
+      py={{ base: 4, md: 8 }}
+      px={{base: 0, md: 8}}
+      mx={{ base: 0, md: 4 }}
+      my={4}
     >
 
       <>
@@ -39,7 +41,7 @@ const Layout = ({ children, title }) => {
 
         <GridItemStyle />
       </>
-    </motion.article>
+    </Box>
   )
 }
 
