@@ -18,8 +18,8 @@ import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbGithub from '../public/images/links/github.png'
+import thumbLinkedin from '../public/images/links/linkedin.png'
 
 
 const Home = () => (
@@ -214,18 +214,18 @@ const Home = () => (
           </ListItem>
         </List>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6} mt={4}> 
+        <SimpleGrid columns={[1, 2, 2]} gap={6} mt={4} align="stretch"> 
           <GridItem
             href="https://github.com/NguyettNhu"
             title="GitHub Portfolio"
-            thumbnail={thumbYouTube}
+            thumbnail={thumbGithub}
           >
             My open-source projects and contributions
           </GridItem>
           <GridItem
-            href="https://linkedin.com/in/nhunguyet"
+            href="https://www.linkedin.com/in/nh%C6%B0-nguy%E1%BB%87t/"
             title="LinkedIn Profile"
-            thumbnail={thumbInkdrop}
+            thumbnail={thumbLinkedin}
           >
             Professional experience and achievements
           </GridItem>
