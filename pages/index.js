@@ -47,7 +47,7 @@ const Home = () => (
           >
             Nguyen Thi Nhu Nguyet
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p> Software engineer (JS)</p>
         </Box>
         <Box
           flexShrink={0}
