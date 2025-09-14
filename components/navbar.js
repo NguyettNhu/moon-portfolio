@@ -5,11 +5,18 @@ import {
   Heading,
   Link,
   Stack,
-  useColorModeValue
+  useColorModeValue,
+  Menu,
+  MenuItem,
+  MenuButton,
+  IconButton,
+  MenuList
 } from '@chakra-ui/react'
+import { forwardRef } from 'react'
 import NextLink from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
 import Logo from './logo'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -33,6 +40,10 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+
+  const MenuLink = forwardRef((props, ref) => (
+    <Link ref={ref} as={NextLink} {...props} />
+  ))
 
   return (
     <Box
@@ -89,7 +100,41 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-      
+        <Box flex={1} align="right">
+
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id="navbar-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+              <MenuList bg='whiteAlpha.300'>
+               
+                <MenuItem bg='transparent' as={MenuLink} href="/works">
+                  Works
+                </MenuItem>
+               
+                <MenuItem bg='transparent' as={MenuLink} href="/posts">
+                  Posts
+                </MenuItem>
+                
+                <MenuItem
+                  bg='transparent'
+                  as={Link}
+                  href="https://github.com/NguyettNhu"
+                  target='_blank'
+                  style={{ gap: 4 }}
+                >
+                  <IoLogoGithub  />
+
+                  Github
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box> 
       </Container>
     </Box>
   )
