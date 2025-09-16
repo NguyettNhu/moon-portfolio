@@ -4,7 +4,7 @@ import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
-  <Box w="100%" h="full" >
+  <Box w="100%" h="full">
     <LinkBox
       as="article"
       cursor="pointer"
@@ -39,7 +39,6 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-
 export const WorkGridItem = ({
   children,
   category = 'works',
@@ -59,7 +58,6 @@ export const WorkGridItem = ({
         alt={title}
         className="grid-item-thumbnail"
         placeholder="blur"
-        
       />
       <LinkOverlay as="div" href={`/${category}/${id}`}>
         <Text mt={2} fontSize={20} fontWeight={600}>

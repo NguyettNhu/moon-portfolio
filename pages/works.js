@@ -17,8 +17,14 @@ import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 const Works = () => (
   <Layout title="Works">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4} bgGradient="linear(to-r, purple.400, purple.200)"
-          bgClip="text" w='fit-content'>
+      <Heading
+        as="h3"
+        fontSize={20}
+        mb={4}
+        bgGradient="linear(to-r, purple.400, purple.200)"
+        bgClip="text"
+        w="fit-content"
+      >
         Works
       </Heading>
 
@@ -60,7 +66,13 @@ const Works = () => (
       <Section delay={0.2}>
         <Divider my={6} />
 
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading
+          as="h3"
+          fontSize={20}
+          mb={4}
+          bgGradient="linear(to-r, purple.400, purple.200)"
+          bgClip="text"
+        >
           Collaborations
         </Heading>
       </Section>
@@ -91,8 +103,14 @@ const Works = () => (
       <Section delay={0.4}>
         <Divider my={6} />
 
-        <Heading as="h3" fontSize={20} mb={4} bgGradient="linear(to-r, purple.400, purple.200)"
-          bgClip="text" w='fit-content'>
+        <Heading
+          as="h3"
+          fontSize={20}
+          mb={4}
+          bgGradient="linear(to-r, purple.400, purple.200)"
+          bgClip="text"
+          w="fit-content"
+        >
           Old works
         </Heading>
       </Section>

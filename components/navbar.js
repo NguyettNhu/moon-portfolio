@@ -27,7 +27,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'cyan.200' : undefined}
+      bg={active ? 'purple.200' : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
@@ -36,7 +36,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     </Link>
   )
 }
-
 
 const Navbar = props => {
   const { path } = props
@@ -80,7 +79,7 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-        
+
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
@@ -101,7 +100,6 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -110,32 +108,29 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList bg="rgba(0, 0, 0, 0.8)"
-      backdropFilter="blur(10px)">
-               
-                <MenuItem bg='transparent' as={MenuLink} href="/works">
+              <MenuList bg="rgba(0, 0, 0, 0.8)" backdropFilter="blur(10px)">
+                <MenuItem bg="transparent" as={MenuLink} href="/works">
                   Works
                 </MenuItem>
-               
-                <MenuItem bg='transparent' as={MenuLink} href="/posts">
+
+                <MenuItem bg="transparent" as={MenuLink} href="/posts">
                   Posts
                 </MenuItem>
-                
+
                 <MenuItem
-                  bg='transparent'
+                  bg="transparent"
                   as={Link}
                   href="https://github.com/NguyettNhu"
-                  target='_blank'
+                  target="_blank"
                   style={{ gap: 4 }}
                 >
-                  <IoLogoGithub  />
-
+                  <IoLogoGithub />
                   Github
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-        </Box> 
+        </Box>
       </Container>
     </Box>
   )

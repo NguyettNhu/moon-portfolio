@@ -15,7 +15,7 @@ const Work = () => (
   <Layout title="Inkdrop">
     <Container>
       <Title>
-        Inkdrop <Badge>2016-</Badge>
+        Inkdrop <Badge color="cyan">2016-</Badge>
       </Title>
       <P>
         A Markdown note-taking app with 100+ plugins, cross-platform and
@@ -24,7 +24,7 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
+          <Link href="https://www.inkdrop.app/" color="purple.300">
             https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
@@ -38,7 +38,10 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Blogpost</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
+          <Link
+            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
+            color="purple.300"
+          >
             How I’ve Attracted The First 500 Paid Users For My SaaS That Costs
             $5/mo <ExternalLinkIcon mx="2px" />
           </Link>
