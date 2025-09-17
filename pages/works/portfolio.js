@@ -12,20 +12,19 @@ import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Work = () => (
-  <Layout title="Inkdrop">
+  <Layout title="Bun's Portfolio">
     <Container>
       <Title>
-        Inkdrop <Badge color="cyan">2016-</Badge>
+        Bun&apos;s Portfolio <Badge color="cyan">2025-</Badge>
       </Title>
       <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $300k.
+        A personal portfolio showcasing my web development and programming projects.
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/" color="purple.300">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
+          <Link href="https://bunsportfolio.io.vn/" color="purple.300">
+            https://bunsportfolio.io.vn/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
@@ -34,22 +33,15 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>NodeJS, Electron, React Native</span>
+          <span>NodeJS, Nextjs, Threejs, AWS</span>
         </ListItem>
-        <ListItem>
-          <Meta>Blogpost</Meta>
-          <Link
-            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
-            color="purple.300"
-          >
-            How I’ve Attracted The First 500 Paid Users For My SaaS That Costs
-            $5/mo <ExternalLinkIcon mx="2px" />
-          </Link>
-        </ListItem>
+        
       </List>
 
-      <WorkImage src="/images/works/inkdrop_01.png" alt="Inkdrop" />
-      <WorkImage src="/images/works/inkdrop_02.png" alt="Inkdrop" />
+      <WorkImage src="/images/works/portfolio1.png" alt="Bun's Portfolio"/>
+
+      <WorkImage src="/images/works/portfolio2.png" alt="Bun's Portfolio" />
+
       <AspectRatio maxW="640px" ratio={1.7} my={4}>
         <iframe
           src="https://www.youtube.com/embed/-qBavwqc_mY"

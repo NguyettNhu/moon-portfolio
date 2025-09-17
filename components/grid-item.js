@@ -1,9 +1,11 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import {
+  Box, Text, LinkBox, LinkOverlay, AspectRatio
+} from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
-export const GridItem = ({ children, href, title, thumbnail }) => (
+export const GridItem = ({ children, href, title, thumbnail, ratio = 16 / 9 }) => (
   <Box w="100%" h="full">
     <LinkBox
       as="article"
@@ -15,23 +17,29 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
       borderWidth="0px"
       borderRadius="md"
       p={3}
+      _hover={{ transform: 'translateY(-2px)', transition: 'all .2s ease' }}
     >
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-        loading="lazy"
-        flex="1"
-      />
+      {/* Khung tỉ lệ cố định cho ảnh */}
+      <AspectRatio ratio={ratio} w="100%" rounded="md" overflow="hidden">
+        <Box position="relative">
+          <Image
+            src={thumbnail}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            style={{ objectFit: 'cover' }}
+            // placeholder="blur"
+            loading="lazy"
+          />
+        </Box>
+      </AspectRatio>
 
-      <LinkOverlay href={href} target="_blank">
+      <LinkOverlay href={href} target="_blank" rel="noopener noreferrer">
         <Text mt={2} fontWeight="bold">
           {title}
         </Text>
       </LinkOverlay>
 
-      {/* flexGrow=1 để phần text chiếm hết chiều cao còn lại, giúp các khối cao bằng nhau */}
       <Text fontSize={14} mt={1} flexGrow={1}>
         {children}
       </Text>
@@ -44,21 +52,24 @@ export const WorkGridItem = ({
   category = 'works',
   id,
   title,
-  thumbnail
+  thumbnail,
+  ratio = 16 / 9
 }) => (
   <Box w="100%" textAlign="center">
-    <LinkBox
-      as={NextLink}
-      href={`/${category}/${id}`}
-      scroll={false}
-      cursor="pointer"
-    >
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-      />
+    <LinkBox as={NextLink} href={`/${category}/${id}`} scroll={false} cursor="pointer">
+      <AspectRatio ratio={ratio} w="100%" rounded="md" overflow="hidden">
+        <Box position="relative">
+          <Image
+            src={thumbnail}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            style={{ objectFit: 'cover' }}
+            // placeholder="blur"
+          />
+        </Box>
+      </AspectRatio>
+
       <LinkOverlay as="div" href={`/${category}/${id}`}>
         <Text mt={2} fontSize={20} fontWeight={600}>
           {title}
@@ -70,11 +81,8 @@ export const WorkGridItem = ({
 )
 
 export const GridItemStyle = () => (
-  <Global
-    styles={`
-      .grid-item-thumbnail {
-        border-radius: 12px;
-      }
-    `}
-  />
+  <Global styles={`
+    /* bo tròn dùng cho container, ảnh fill theo khung */
+    .chakra-aspect-ratio { border-radius: 12px; }
+  `}/>
 )
