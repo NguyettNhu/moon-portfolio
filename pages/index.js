@@ -33,7 +33,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-Hello, I&apos;m Nguyễn Thị Như Nguyệt, an aspiring Software Engineer who is always eager to learn and create useful, sustainable products that are optimized for both user experience and performance.     </Box>
+Hello, I&apos;m Nguyen Thi Nhu Nguyet, an aspiring Software Engineer who is always eager to learn and create useful, sustainable products that are optimized for both user experience and performance.     </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
